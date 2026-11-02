@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yatzy</title>
+  <link rel="stylesheet" href="dice.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="game-container">
+
+  <h1>Yatzy</h1>
+
+  <p id="message"></p>
+
+  <!-- the 5 dice are added by app.js -->
+  <div class="dice-group" id="diceGroup"></div>
+
+  <button id="rollButton">Roll Dice</button>
+  <button id="endGameButton">End Game</button>
+  <button id="newGameButton">New Game</button>
+
+  <!-- data-category matches the names in YatzyEngine -->
+  <table class="scorecard">
+    <tr><th colspan="2">Upper Section</th></tr>
+    <tr class="score-section" data-category="ones"><td><label>Ones</label></td><td><span id="onesScore">-</span></td></tr>
+    <tr class="score-section" data-category="twos"><td><label>Twos</label></td><td><span id="twosScore">-</span></td></tr>
+    <tr class="score-section" data-category="threes"><td><label>Threes</label></td><td><span id="threesScore">-</span></td></tr>
+    <tr class="score-section" data-category="fours"><td><label>Fours</label></td><td><span id="foursScore">-</span></td></tr>
+    <tr class="score-section" data-category="fives"><td><label>Fives</label></td><td><span id="fivesScore">-</span></td></tr>
+    <tr class="score-section" data-category="sixes"><td><label>Sixes</label></td><td><span id="sixesScore">-</span></td></tr>
+    <tr class="score-section"><td><label>Sum</label></td><td><span id="upperSum">0</span></td></tr>
+    <tr class="score-section"><td><label>Bonus</label></td><td><span id="bonusScore">0</span></td></tr>
+
+    <tr><th colspan="2">Lower Section</th></tr>
+    <tr class="score-section" data-category="onePair"><td><label>One Pair</label></td><td><span id="onePairScore">-</span></td></tr>
+    <tr class="score-section" data-category="twoPairs"><td><label>Two Pairs</label></td><td><span id="twoPairsScore">-</span></td></tr>
+    <tr class="score-section" data-category="threeKind"><td><label>Three of a Kind</label></td><td><span id="threeKindScore">-</span></td></tr>
+    <tr class="score-section" data-category="fourKind"><td><label>Four of a Kind</label></td><td><span id="fourKindScore">-</span></td></tr>
+    <tr class="score-section" data-category="smallStraight"><td><label>Small Straight</label></td><td><span id="smallStraightScore">-</span></td></tr>
+    <tr class="score-section" data-category="largeStraight"><td><label>Large Straight</label></td><td><span id="largeStraightScore">-</span></td></tr>
+    <tr class="score-section" data-category="fullHouse"><td><label>Full House</label></td><td><span id="fullHouseScore">-</span></td></tr>
+    <tr class="score-section" data-category="chance"><td><label>Chance</label></td><td><span id="chanceScore">-</span></td></tr>
+    <tr class="score-section" data-category="yatzy"><td><label>Yatzy</label></td><td><span id="yatzyScore">-</span></td></tr>
+  </table>
+
+  <div id="totalScore">Total: 0</div>
+
+</div>
+
+<script src="dice.js"></script>
+<script src="yatzyEngine.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>

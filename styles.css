@@ -1,0 +1,74 @@
+.game-container {
+  background-color: #f4f4f4;
+  padding: 20px;
+  margin: auto;
+  width: 50%;
+}
+
+button {
+  background: linear-gradient(#f4f4f4, #ddd);
+  padding: 10px 20px;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+button:hover {
+  background: linear-gradient(#ddd, #f4f4f4);
+}
+
+button:disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+
+.dice-group {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.dice-container { cursor: pointer; }
+
+/* kept dice */
+.dice-container.held .dice { background-color: #ddd; }
+
+.scorecard {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.scorecard td {
+  padding: 4px;
+  border-bottom: 1px solid #ddd;
+}
+
+.score-section[data-category] { cursor: pointer; }
+.score-section[data-category]:hover { background-color: #ddd; }
+
+/* score a box would get with the current dice */
+.preview {
+  color: #888;
+  font-style: italic;
+}
+
+.score-section.used {
+  cursor: default;
+  font-weight: bold;
+}
+.score-section.used:hover { background-color: transparent; }
+
+#totalScore {
+  margin-top: 10px;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+@media (max-width: 900px) {
+  .game-container { width: auto; }
+}
+
+/* smaller dice so all 5 fit on a phone */
+@media (max-width: 600px) {
+  .dice { zoom: 0.5; }
+  button { padding: 8px 12px; font-size: 1em; }
+}
